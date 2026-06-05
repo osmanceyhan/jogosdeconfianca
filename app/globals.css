@@ -1,0 +1,359 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vault-bg: #0a0e1a;
+  --vault-bg-soft: #0e1424;
+  --vault-card: #131a2e;
+  --vault-card-light: #fafafa;
+  --vault-ink: #0d1525;
+  --vault-ink-mute: #5d6b85;
+  --vault-line-light: #ece6d8;
+  --vault-gold: #d4a85a;
+  --vault-gold-dim: #a98443;
+  --vault-gold-soft: #f0cf85;
+  --vault-text: #e6e9f2;
+  --vault-mute: #8b96aa;
+  --vault-border: #1f2942;
+}
+
+html,
+body {
+  background: var(--vault-bg);
+  color: var(--vault-text);
+  font-family: var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-cinzel), Georgia, serif;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.vault-gradient {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(212, 168, 90, 0.12), transparent 60%),
+    radial-gradient(800px 400px at 10% 30%, rgba(60, 100, 200, 0.08), transparent 60%),
+    var(--vault-bg);
+}
+
+.title-strip {
+  background: linear-gradient(180deg, #0e1424 0%, #0a0e1a 100%);
+  border-bottom: 1px solid rgba(212, 168, 90, 0.15);
+}
+
+/* Dark card variant retained for safety/FAQ optional usage */
+.card-edge {
+  background: linear-gradient(180deg, #161e36 0%, #0f1426 100%);
+  border: 1px solid var(--vault-border);
+}
+
+.gold-rule {
+  background: linear-gradient(90deg, transparent 0%, var(--vault-gold) 50%, transparent 100%);
+  height: 1px;
+}
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+@layer components {
+  /* ---------- Modern light offer card ---------- */
+  .offer-card {
+    position: relative;
+    background: #fafafa;
+    color: var(--vault-ink);
+    border-radius: 14px;
+    padding: 16px;
+    border: 1px solid var(--vault-line-light);
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.1),
+      0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: 640px) {
+    .offer-card {
+      border-radius: 18px;
+      padding: 28px;
+    }
+  }
+
+  .offer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--vault-gold);
+  }
+
+  .offer-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.12),
+      0 18px 40px rgba(0, 0, 0, 0.32);
+  }
+
+  .offer-logo-panel {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 10px 14px;
+    min-height: 60px;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #efeae0;
+  }
+  @media (min-width: 640px) {
+    .offer-logo-panel {
+      padding: 12px 16px;
+      min-height: 84px;
+      min-width: 140px;
+    }
+  }
+
+  .offer-rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff8ec;
+    border: 1px solid rgba(212, 168, 90, 0.35);
+    color: #8a6418;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+  }
+
+  .offer-meta-row {
+    color: var(--vault-ink-mute);
+    font-size: 12px;
+  }
+
+  .offer-bonus {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--vault-ink);
+    line-height: 1.35;
+  }
+
+  .offer-bullets {
+    color: var(--vault-ink-mute);
+    font-size: 14.5px;
+  }
+
+  .offer-bullets li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 2px 0;
+  }
+
+  .offer-chip {
+    display: inline-block;
+    background: #f1ede4;
+    color: #6b6452;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+
+  .offer-foot {
+    border-top: 1px solid var(--vault-line-light);
+    color: var(--vault-ink-mute);
+    font-size: 12.5px;
+  }
+
+  .offer-mindep {
+    display: inline-flex;
+    align-items: center;
+    background: #fff8ec;
+    color: #8a6418;
+    border: 1px solid rgba(212, 168, 90, 0.35);
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .offer-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--vault-gold);
+    color: var(--vault-bg);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 12px 16px;
+    border-radius: 10px;
+    transition: transform 200ms ease, box-shadow 200ms ease, background 150ms ease;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+  }
+  @media (min-width: 640px) {
+    .offer-cta {
+      padding: 14px 24px;
+      border-radius: 12px;
+    }
+  }
+  .offer-cta:hover {
+    background: #e2b76b;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(212, 168, 90, 0.28);
+  }
+
+  .offer-fineprint {
+    color: #8a8474;
+    font-size: 10.5px;
+  }
+
+  .offer-brand-name {
+    font-family: var(--font-cinzel), Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--vault-ink);
+    line-height: 1.15;
+  }
+
+  .offer-eyebrow {
+    color: var(--vault-gold-dim);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+  }
+
+  /* ---------- Safety panel (light cream on dark page) ---------- */
+  .safety-panel {
+    background: #f6f3ee;
+    color: var(--vault-ink);
+    border: 1px solid #e6e0d0;
+    border-radius: 18px;
+    padding: 36px;
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.08),
+      0 10px 28px rgba(0, 0, 0, 0.22);
+  }
+  .safety-panel h2 {
+    color: var(--vault-ink);
+  }
+  .safety-panel p {
+    color: #3f4a63;
+  }
+  .safety-panel .eyebrow {
+    color: var(--vault-gold-dim);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-weight: 600;
+  }
+  .safety-panel a.link {
+    color: var(--vault-gold-dim);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* ---------- FAQ accordion ---------- */
+  .faq-item {
+    background: #f6f3ee;
+    border: 1px solid #e6e0d0;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: box-shadow 200ms ease, border-color 200ms ease;
+  }
+  .faq-item[open] {
+    border-color: rgba(212, 168, 90, 0.55);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  }
+  .faq-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 22px;
+    color: var(--vault-ink);
+    font-weight: 600;
+    font-size: 15.5px;
+  }
+  .faq-body {
+    padding: 0 22px 20px;
+    color: #4a5468;
+    line-height: 1.65;
+    font-size: 14.5px;
+  }
+  .faq-toggle {
+    color: var(--vault-gold-dim);
+    font-size: 26px;
+    line-height: 1;
+    transition: transform 200ms ease;
+  }
+  details[open] .faq-toggle {
+    transform: rotate(45deg);
+  }
+
+  /* ---------- Buttons (shared) ---------- */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--vault-gold);
+    color: var(--vault-bg);
+    font-weight: 600;
+    padding: 14px 24px;
+    border-radius: 12px;
+    transition: transform 200ms ease, box-shadow 200ms ease, background 150ms ease;
+  }
+  .btn-primary:hover {
+    background: #e2b76b;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(212, 168, 90, 0.28);
+  }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid rgba(212, 168, 90, 0.55);
+    color: var(--vault-gold);
+    padding: 12.5px 22px;
+    border-radius: 12px;
+    transition: transform 200ms ease, background 150ms ease, color 150ms ease;
+  }
+  .btn-secondary:hover {
+    background: rgba(212, 168, 90, 0.1);
+    transform: translateY(-1px);
+  }
+
+  /* ---------- Section eyebrow ---------- */
+  .eyebrow {
+    color: var(--vault-gold);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-weight: 600;
+  }
+}

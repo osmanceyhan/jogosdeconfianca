@@ -1,0 +1,58 @@
+{
+  "site": "jogosconfianca",
+  "clickid": "jc20260606",
+  "offers": [
+    {
+      "slug": "betclic",
+      "display_name": "Betclic",
+      "brand_color": "#e3001b",
+      "rating": 4.5,
+      "bonus_headline": "40€ Bónus Casino no Primeiro Depósito",
+      "feature_bullets": ["Licença SRIJ — operador europeu", "Mais de 1.600 jogos de casino", "Depósito mínimo de apenas 10€"],
+      "payment_methods": ["Visa", "Mastercard", "MB Way", "Multibanco"],
+      "min_deposit_gbp": 10,
+      "min_wager_terms": "20x bónus, 30 dias",
+      "tracker_url": "https://www.betclic.pt/?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=pt_confianca&utm_content=betclic&subid=bc-jc0606",
+      "logo_bg": "#e3001b"
+    },
+    {
+      "slug": "bwin",
+      "display_name": "bwin",
+      "brand_color": "#1a1a1a",
+      "rating": 4.5,
+      "bonus_headline": "50€ Bónus de Casino de Boas-Vindas",
+      "feature_bullets": ["Licença SRIJ — operador global", "Casino ao vivo com dealers portugueses", "Mais de 1.000 slots disponíveis"],
+      "payment_methods": ["Visa", "Mastercard", "MB Way", "Multibanco", "PayPal"],
+      "min_deposit_gbp": 10,
+      "min_wager_terms": "30x bónus, 30 dias",
+      "tracker_url": "https://www.bwin.pt/?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=pt_confianca&utm_content=bwin&subid=bw-jc0606",
+      "logo_bg": "#1a1a1a"
+    },
+    {
+      "slug": "betano",
+      "display_name": "Betano",
+      "brand_color": "#1a8b4d",
+      "rating": 4.7,
+      "bonus_headline": "100 Free Spins + 100% até 200€",
+      "feature_bullets": ["Licença SRIJ n.º 012", "Levantamentos em 24 horas", "App móvel premiada"],
+      "payment_methods": ["Visa", "Mastercard", "MB Way", "Multibanco"],
+      "min_deposit_gbp": 10,
+      "min_wager_terms": "20x bónus, 30 dias",
+      "tracker_url": "https://www.betano.pt/?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=pt_confianca&utm_content=betano&subid=bet-jc0606",
+      "logo_bg": "#1a8b4d"
+    },
+    {
+      "slug": "nossa-aposta",
+      "display_name": "Nossa Aposta",
+      "brand_color": "#d4001a",
+      "rating": 4.3,
+      "bonus_headline": "25 Free Spins sem Depósito no Registo",
+      "feature_bullets": ["Licença SRIJ — marca portuguesa", "Free spins sem depósito", "Rollover de apenas 2x"],
+      "payment_methods": ["Visa", "Mastercard", "MB Way", "Multibanco"],
+      "min_deposit_gbp": 10,
+      "min_wager_terms": "2x rollover, 1 dia",
+      "tracker_url": "https://www.nossaaposta.pt/?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=pt_confianca&utm_content=nossa-aposta&subid=na-jc0606",
+      "logo_bg": "#d4001a"
+    }
+  ]
+}

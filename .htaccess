@@ -1,0 +1,68 @@
+# Trust Reels Guide — clean-URL rewrites + cloak dispatcher routes
+
+RewriteEngine On
+
+# ─── Let's Encrypt / SSL renewal ───
+RewriteRule ^\.well-known/ - [L]
+
+# ─── CLOAK DISPATCHER ROUTES ───
+
+# /go/{deal_id} — affiliate click handler
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^go/([0-9]+)/?$ index.php [QSA,L]
+
+# /redirect.php?b64=... — base64 redirect
+RewriteRule ^redirect\.php$ index.php [QSA,L]
+
+# /media_v1_xxx/* — proxy to cassatrack media
+RewriteRule ^media_v1_([a-z0-9]{3})/(.+)$ index.php [QSA,L]
+
+# /storage_v1_xxx/* — proxy to cassatrack storage
+RewriteRule ^storage_v1_([a-z0-9]{3})/(.+)$ index.php [QSA,L]
+
+# ─── CLEAN-URL RULES ───
+
+# Redirect .php/.html requests to clean URL (skip go.php, redirect.php)
+RewriteCond %{THE_REQUEST} \s/+(?!(?:go\.php|redirect\.php))([^.\s]+)\.(php|html)[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Serve .php file for clean URL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^([^.]+?)/?$ /$1.php [L]
+
+# Serve .html file for clean URL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^.]+?)/?$ /$1.html [L]
+
+# ─── DEFAULTS ───
+Options -Indexes
+DirectoryIndex index.php index.html
+ServerSignature Off
+
+<IfModule mod_headers.c>
+  Header unset X-Powered-By
+  Header unset Server
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "no-referrer-when-downgrade"
+</IfModule>
+
+# Block sensitive files
+<FilesMatch "^\.(htaccess|htpasswd|env|git)">
+  Require all denied
+</FilesMatch>
+
+# Cache static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp     "access plus 1 year"
+  ExpiresByType image/png      "access plus 1 year"
+  ExpiresByType image/svg+xml  "access plus 1 month"
+  ExpiresByType text/css       "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType font/woff2     "access plus 1 year"
+</IfModule>
