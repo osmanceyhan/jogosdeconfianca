@@ -125,6 +125,15 @@ body { background: var(--jc-bg); color: var(--jc-ink); }
 .jc-panel p { font-size: 12px; color: var(--jc-mute); line-height: 1.6; margin: 0; }
 .jc-panel strong { color: var(--jc-amber); }
 
+.jc-partners {
+  display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
+  margin-top: 16px; padding: 14px; background: var(--jc-card);
+  border: 1px solid var(--jc-border); border-radius: 14px;
+}
+.jc-partners a { display: flex; }
+.jc-partners img { height: 20px; width: auto; opacity: 0.35; transition: opacity 200ms; }
+.jc-partners a:hover img { opacity: 0.75; }
+
 /* ── PERGUNTAS ── */
 .jc-perguntas { padding: 36px 0; border-top: 1px solid var(--jc-border); }
 .jc-perguntas-title { font-family: var(--font-instrument); font-size: 18px; text-align: center; margin-bottom: 14px; }

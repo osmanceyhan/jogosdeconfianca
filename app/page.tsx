@@ -86,6 +86,11 @@ export default async function HomePage() {
               <p>Este site destina-se a adultos 18+. Alguns links são de afiliados. Se o jogo se tornar problemático, ligue <strong>800 202 175</strong> (SOS Jogo, gratuito).</p>
             </div>
           </div>
+          <div className="jc-partners">
+            <a href="https://www.gamcare.org.uk" target="_blank" rel="noopener"><img src="/logos/safety/gamcare.svg" alt="GamCare" width="80" height="24" /></a>
+            <a href="https://www.begambleaware.org" target="_blank" rel="noopener"><img src="/logos/safety/gambleaware.svg" alt="BeGambleAware" width="100" height="24" /></a>
+            <a href="https://www.gamstop.co.uk" target="_blank" rel="noopener"><img src="/logos/safety/gamstop.svg" alt="GamStop" width="80" height="24" /></a>
+          </div>
         </section>
 
         <Perguntas />
