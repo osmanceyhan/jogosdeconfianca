@@ -132,7 +132,7 @@ body { background: var(--jc-bg); color: var(--jc-ink); }
   border: 1px solid var(--jc-border); border-radius: 14px;
 }
 .jc-partners a { display: flex; }
-.jc-partners img { height: 20px; width: auto; opacity: 0.35; transition: opacity 200ms; }
+.jc-partners img { height: 40px; width: auto; opacity: 0.5; transition: opacity 200ms; }
 .jc-partners a:hover img { opacity: 0.75; }
 
 /* ── PERGUNTAS ── */
