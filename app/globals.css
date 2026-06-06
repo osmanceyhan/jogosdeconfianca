@@ -112,6 +112,7 @@ body { background: var(--jc-bg); color: var(--jc-ink); }
   margin-top: auto; text-decoration: none; transition: background 200ms;
 }
 .jc-pick-cta:hover { background: #f59e0b; color: #1c1714; }
+.jc-pick-tc { font-size: 9px; color: var(--jc-mute); text-align: center; margin: 2px 0 0; }
 
 /* ── PANELS ── */
 .jc-panels { padding: 44px 0; border-top: 1px solid var(--jc-border); }

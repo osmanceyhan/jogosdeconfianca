@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: 'Jogos de Confiança — Ofertas de Casino Verificadas em Portugal',
   description: 'Ofertas de casino verificadas com licença SRIJ em Portugal. Comparação editorial independente para adultos 18+.',
   robots: { index: true, follow: true },
+  icons: { icon: '/favicon.svg' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

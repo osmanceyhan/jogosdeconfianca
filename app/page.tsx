@@ -7,7 +7,7 @@ import offersData from '@/data/offers.json';
 type Offer = {
   slug: string; display_name: string; brand_color: string; rating: number;
   bonus_headline: string; feature_bullets: string[]; payment_methods: string[];
-  min_deposit_gbp: number; min_wager_terms: string; tracker_url: string;
+  min_deposit_eur: number; min_wager_terms: string; tracker_url: string;
   logo_url?: string; logo_bg?: string;
 };
 
@@ -26,7 +26,7 @@ async function loadDeals(): Promise<{ deals: Offer[]; isBlack: boolean }> {
           return { deals: raw.map((d: any) => {
             const b = d.brand || {};
             const pm = Array.isArray(d.payment_methods) ? d.payment_methods.map((p: any) => typeof p === 'string' ? p : p.name || '') : [];
-            return { slug: b.slug || d.slug || String(d.id), display_name: d.name || b.name || '', brand_color: b.brand_color || '#d97706', rating: Math.min(5, Number(d.rate) || 0), bonus_headline: `${d.bonus || ''} ${d.bonus_value || ''}`.trim() || 'Oferta de boas-vindas', feature_bullets: pm.length > 0 ? [`Aceita ${pm.slice(0, 2).join(' e ')}`, 'Revisão editorial', 'Levantamentos rápidos'] : ['Operador licenciado', 'Revisão editorial', 'Levantamentos rápidos'], payment_methods: pm.length > 0 ? pm.slice(0, 5) : ['Visa', 'Mastercard'], min_deposit_gbp: Number(d.min_deposit) || 10, min_wager_terms: d.terms || '18+ T&Cs', tracker_url: d.link || '', logo_url: d.img || '' };
+            return { slug: b.slug || d.slug || String(d.id), display_name: d.name || b.name || '', brand_color: b.brand_color || '#d97706', rating: Math.min(5, Number(d.rate) || 0), bonus_headline: `${d.bonus || ''} ${d.bonus_value || ''}`.trim() || 'Oferta de boas-vindas', feature_bullets: pm.length > 0 ? [`Aceita ${pm.slice(0, 2).join(' e ')}`, 'Revisão editorial', 'Levantamentos rápidos'] : ['Operador licenciado', 'Revisão editorial', 'Levantamentos rápidos'], payment_methods: pm.length > 0 ? pm.slice(0, 5) : ['Visa', 'Mastercard'], min_deposit_eur: Number(d.min_deposit) || 10, min_wager_terms: d.terms || '18+ T&Cs', tracker_url: d.link || '', logo_url: d.img || '' };
           }), isBlack: true };
         }
       }
@@ -87,9 +87,8 @@ export default async function HomePage() {
             </div>
           </div>
           <div className="jc-partners">
-            <a href="https://www.gamcare.org.uk" target="_blank" rel="noopener"><img src="/logos/safety/gamcare.svg" alt="GamCare" width="80" height="24" /></a>
-            <a href="https://www.begambleaware.org" target="_blank" rel="noopener"><img src="/logos/safety/gambleaware.svg" alt="BeGambleAware" width="100" height="24" /></a>
-            <a href="https://www.gamstop.co.uk" target="_blank" rel="noopener"><img src="/logos/safety/gamstop.svg" alt="GamStop" width="80" height="24" /></a>
+            <a href="https://www.gambleaware.org/" target="_blank" rel="noopener"><img src="/logos/safety/gambleaware.svg" alt="GambleAware" width="100" height="24" /></a>
+            <a href="https://www.srij.turismodeportugal.pt/" target="_blank" rel="noopener"><img src="/logos/safety/srij.png" alt="SRIJ" width="80" height="24" /></a>
           </div>
         </section>
 

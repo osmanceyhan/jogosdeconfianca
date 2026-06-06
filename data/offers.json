@@ -1,5 +1,5 @@
 {
-  "site": "jogosconfianca",
+  "site": "jogosdeconfianca",
   "clickid": "cnf2026s1",
   "offers": [
     {
@@ -10,7 +10,7 @@
       "bonus_headline": "50€ Bónus de Casino de Boas-Vindas",
       "feature_bullets": ["Licença SRIJ — operador global", "Cashback semanal disponível", "Programa VIP com benefícios exclusivos"],
       "payment_methods": ["Visa", "Mastercard", "MB Way", "Multibanco", "PayPal"],
-      "min_deposit_gbp": 10,
+      "min_deposit_eur": 10,
       "min_wager_terms": "30x bónus, 30 dias",
       "tracker_url": "https://www.bwin.pt/pt/casino?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=confianca_pt&subid=cnf_bwin_j1",
       "logo_bg": "#1a1a1a"
@@ -23,7 +23,7 @@
       "bonus_headline": "40€ Bónus Casino no Primeiro Depósito",
       "feature_bullets": ["Licença SRIJ — operador europeu", "Mais de 1.600 jogos disponíveis", "Apoio ao cliente em português"],
       "payment_methods": ["Visa", "Mastercard", "MB Way", "Multibanco"],
-      "min_deposit_gbp": 10,
+      "min_deposit_eur": 10,
       "min_wager_terms": "20x bónus, 30 dias",
       "tracker_url": "https://www.betclic.pt/casino?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=confianca_pt&subid=cnf_betclic_j2",
       "logo_bg": "#e3001b"
@@ -36,7 +36,7 @@
       "bonus_headline": "25 Free Spins sem Depósito no Registo",
       "feature_bullets": ["Licença SRIJ — marca portuguesa", "Slots clássicas e roleta ao vivo", "Casinos físicos em todo o país"],
       "payment_methods": ["Visa", "Mastercard", "MB Way", "Multibanco"],
-      "min_deposit_gbp": 10,
+      "min_deposit_eur": 10,
       "min_wager_terms": "30x bónus, 30 dias",
       "tracker_url": "https://www.solverde.pt/casino?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=confianca_pt&subid=cnf_solverde_j3",
       "logo_bg": "#003d7a"
@@ -49,7 +49,7 @@
       "bonus_headline": "Bónus Especial para Novos Jogadores",
       "feature_bullets": ["Licença SRIJ — pioneiro em Portugal", "Mais de 200 jogos premium", "Plataforma intuitiva e otimizada"],
       "payment_methods": ["Visa", "Mastercard", "MB Way", "Multibanco"],
-      "min_deposit_gbp": 10,
+      "min_deposit_eur": 10,
       "min_wager_terms": "30x bónus, 30 dias",
       "tracker_url": "https://tracker-pm2.casinoportugal.pt/link?btag=85116035_380423&utm_source=jogosdeconfianca&subid=cnf_caspt_j4",
       "logo_bg": "#c41e3a"

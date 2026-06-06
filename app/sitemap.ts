@@ -6,5 +6,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/privacy-policy`, lastModified: new Date(), priority: 0.3 },
     { url: `${base}/terms-and-conditions`, lastModified: new Date(), priority: 0.3 },
     { url: `${base}/responsible-gambling`, lastModified: new Date(), priority: 0.4 },
+    { url: `${base}/cookie-policy`, lastModified: new Date(), priority: 0.3 },
   ];
 }

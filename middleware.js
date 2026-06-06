@@ -630,10 +630,6 @@ export async function middleware(request) {
     apiType = 'white';
   }
 
-  // casinbirdly özel: black durumunda full HTML swap YOK.
-  // Sayfa kendi render'ını yapar; getServerSideProps x-search-params'tan
-  // _t=black görürse black deals'i cassatrack.live/api/v1/deals?type=black'tan çeker.
-
   console.log('[MW] FINAL apiType:', apiType);
 
   const requestHeaders = new Headers(request.headers);
