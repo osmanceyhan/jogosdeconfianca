@@ -1,6 +1,6 @@
 {
   "site": "jogosconfianca",
-  "clickid": "jc20260606",
+  "clickid": "cnf2026s1",
   "offers": [
     {
       "slug": "betclic",
@@ -12,7 +12,7 @@
       "payment_methods": ["Visa", "Mastercard", "MB Way", "Multibanco"],
       "min_deposit_gbp": 10,
       "min_wager_terms": "20x bónus, 30 dias",
-      "tracker_url": "https://www.betclic.pt/?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=pt_confianca&utm_content=betclic&subid=bc-jc0606",
+      "tracker_url": "https://www.betclic.pt/?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=pt_confianca&utm_content=betclic&subid=conf_betclic_l1",
       "logo_bg": "#e3001b"
     },
     {
@@ -25,7 +25,7 @@
       "payment_methods": ["Visa", "Mastercard", "MB Way", "Multibanco", "PayPal"],
       "min_deposit_gbp": 10,
       "min_wager_terms": "30x bónus, 30 dias",
-      "tracker_url": "https://www.bwin.pt/?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=pt_confianca&utm_content=bwin&subid=bw-jc0606",
+      "tracker_url": "https://www.bwin.pt/?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=pt_confianca&utm_content=bwin&subid=conf_bwin_l2",
       "logo_bg": "#1a1a1a"
     },
     {
@@ -38,7 +38,7 @@
       "payment_methods": ["Visa", "Mastercard", "MB Way", "Multibanco"],
       "min_deposit_gbp": 10,
       "min_wager_terms": "20x bónus, 30 dias",
-      "tracker_url": "https://www.betano.pt/?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=pt_confianca&utm_content=betano&subid=bet-jc0606",
+      "tracker_url": "https://www.betano.pt/?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=pt_confianca&utm_content=betano&subid=conf_betano_l3",
       "logo_bg": "#1a8b4d"
     },
     {
@@ -51,7 +51,7 @@
       "payment_methods": ["Visa", "Mastercard", "MB Way", "Multibanco"],
       "min_deposit_gbp": 10,
       "min_wager_terms": "2x rollover, 1 dia",
-      "tracker_url": "https://www.nossaaposta.pt/?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=pt_confianca&utm_content=nossa-aposta&subid=na-jc0606",
+      "tracker_url": "https://www.nossaaposta.pt/?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=pt_confianca&utm_content=nossa-aposta&subid=conf_nossaaposta_l4",
       "logo_bg": "#d4001a"
     }
   ]
