@@ -2,6 +2,7 @@ import { headers } from 'next/headers';
 import PickCard from '@/components/PickCard';
 import Perguntas from '@/components/Perguntas';
 import CookieNotice from '@/components/CookieNotice';
+import BarMenu from '@/components/BarMenu';
 import offersData from '@/data/offers.json';
 
 type Offer = {
@@ -48,6 +49,7 @@ export default async function HomePage() {
             <a href="#seguranca">Segurança</a>
             <a href="/responsible-gambling">Jogo Responsável</a>
           </nav>
+          <BarMenu />
         </div>
       </header>
 
