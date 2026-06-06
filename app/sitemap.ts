@@ -1,14 +1,10 @@
 import type { MetadataRoute } from 'next';
-
-const BASE = 'https://vaultjackpotzone.com';
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const base = 'https://jogosdeconfianca.live';
   return [
-    { url: `${BASE}/`, lastModified: now, changeFrequency: 'weekly', priority: 1 },
-    { url: `${BASE}/privacy-policy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${BASE}/cookie-policy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${BASE}/responsible-gambling`, lastModified: now, changeFrequency: 'yearly', priority: 0.5 },
-    { url: `${BASE}/terms-and-conditions`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
+    { url: base, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },
+    { url: `${base}/privacy-policy`, lastModified: new Date(), priority: 0.3 },
+    { url: `${base}/terms-and-conditions`, lastModified: new Date(), priority: 0.3 },
+    { url: `${base}/responsible-gambling`, lastModified: new Date(), priority: 0.4 },
   ];
 }
