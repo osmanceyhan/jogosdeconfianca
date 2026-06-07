@@ -12,7 +12,7 @@
       "payment_methods": ["Visa", "Mastercard", "MB Way", "Multibanco", "PayPal"],
       "min_deposit_eur": 10,
       "min_wager_terms": "30x bónus, 30 dias",
-      "tracker_url": "https://www.bwin.pt/pt/casino?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=confianca_pt&subid=cnf_bwin_j1",
+      "tracker_url": "https://www.bwin.pt/pt/sports?utm_source=jogosdeconfianca&utm_medium=affiliate&utm_campaign=confianca_pt&subid=cnf_bwin_j1",
       "logo_bg": "#1a1a1a"
     },
     {
